@@ -32,7 +32,7 @@ jobs:
         files: |
           dist/**/*.dmg
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # Windows 用の job 定義
   build_on_win:
@@ -55,4 +55,4 @@ jobs:
         files: |
           dist/**/*.exe
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

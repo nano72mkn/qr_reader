@@ -61,6 +61,12 @@
     "win": {
       "target": "nsis",
       "icon": "build/iconx256.png"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "shota.miyahira",
+      "repo": "qr_reader",
+      "releaseType": "release"
     }
   }
 }
