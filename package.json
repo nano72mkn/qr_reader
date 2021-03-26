@@ -59,7 +59,18 @@
       "icon": "icons/iconx516.png"
     },
     "win": {
-      "target": "nsis",
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
       "icon": "build/iconx256.png"
     },
     "publish": {
