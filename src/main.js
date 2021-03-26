@@ -1,5 +1,4 @@
-const { app, BrowserWindow } = require("electron");
-const path = require("path");
+const { BrowserWindow } = require("electron");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -7,6 +6,9 @@ function createWindow() {
     height: 600,
     webPreferences: {
       devTools: process.env.NODE_ENV === "dev",
+      webviewTag: true,
+      alwaysOnTop: true,
+      fullscreen: true,
     },
   });
 
@@ -14,19 +16,3 @@ function createWindow() {
 
   win.loadFile("index.html");
 }
-
-app.whenReady().then(() => {
-  createWindow();
-
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
-});
-
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-  }
-});
