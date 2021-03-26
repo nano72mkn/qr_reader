@@ -11,6 +11,7 @@
   "author": "Shota Miyahira",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^12.0.2"
+    "electron": "^12.0.2",
+    "prettier": "^2.2.1"
   }
 }
