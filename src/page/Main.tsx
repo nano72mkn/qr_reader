@@ -31,7 +31,7 @@ export const Main: React.FC = () => {
           <Input
             type={'text'}
             name={'url'}
-            placeholder={'URLを入力'}
+            placeholder={'https://....'}
             inputRef={(input) => {
               if (!input) return;
               input.focus();
